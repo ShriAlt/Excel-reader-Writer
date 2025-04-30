@@ -9,7 +9,7 @@ import java.io.IOException;
 public class Bottle {
 
     public void readExcel() throws IOException {
-        String path="C:\\Users\\shrih\\OneDrive\\Pictures\\Documents\\Assignments\\poi1\\src\\datafiles\\info.xlsx"; //this will set the path to the Excel sheet .//-> refers to current workspace
+        String path="C:\\Users\\shrih\\OneDrive\\Pictures\\Documents\\Excel-reader-Writer\\tshirt\\src\\main\\resources\\info.xlsx"; //this will set the path to the Excel sheet .//-> refers to current workspace
         FileInputStream fileInputStream=new FileInputStream(path); // this class FileInputStream is used  open the Excel sheet
 
         XSSFWorkbook workbook=new XSSFWorkbook(fileInputStream); // this is to workbook from the file
@@ -25,6 +25,8 @@ public class Bottle {
 
             for (int c=0;c<cols;c++){
                 XSSFCell cell=row.getCell(c);
+               double id=0;
+               String name;
 
                 switch (cell.getCellType()){
                     case STRING:System.out.println(cell.getStringCellValue()); break;
@@ -32,7 +34,6 @@ public class Bottle {
                         System.out.println(cell.getNumericCellValue()); break;
                 }
             }
-            System.out.println();
         }
 
 
