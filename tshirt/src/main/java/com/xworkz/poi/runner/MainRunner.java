@@ -13,5 +13,6 @@ public class MainRunner {
 
         Pillow pillow=new Pillow();
         pillow.readSheet();
+        pillow.excelWrite();
     }
 }
