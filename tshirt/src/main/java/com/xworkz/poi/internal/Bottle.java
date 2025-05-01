@@ -25,8 +25,6 @@ public class Bottle {
 
             for (int c=0;c<cols;c++){
                 XSSFCell cell=row.getCell(c);
-               double id=0;
-               String name;
 
                 switch (cell.getCellType()){
                     case STRING:System.out.println(cell.getStringCellValue()); break;
